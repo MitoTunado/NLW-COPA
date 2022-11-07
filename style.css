@@ -12,7 +12,11 @@ body {
   background-color: #121214;
   background-image: url(./assets/bg.svg);
   background-position-x: center;
-  background-position-y: 55.6%;
+  background-position-y: -715px;
+}
+
+body * { 
+  font-family: 'Roboto', sans-serif;
 }
 
 #app {
@@ -22,6 +26,13 @@ body {
 
 header { 
   margin-bottom: 63px;
+  text-align: center;
+}
+
+#cards {
+  display: flex; /*joga um pro lado do outro*/
+  flex-direction: column; /*deixa em formato de coluna, um abaixo do outro*/
+  gap: 32px;
 }
 
 .card { 
@@ -37,6 +48,7 @@ header {
   display: flex; 
   gap: 16px;
   justify-content: center;
+  align-items: center;
 
   padding: 8px 16px;
   border: 1px solid #746615;
@@ -51,4 +63,32 @@ header {
 
 .card h2 span { 
   color: #e1e1e6;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.card ul /*dar uma atencao a mais*/{ 
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 270px;
+}
+
+.card ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card ul li + li /*li anterior a ele*/{ 
+  padding-top: 24px;
+  border-top: 1px solid #323238;
+
+}
+
+.card ul li strong { 
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 125%;
+  color: #E1E1E6;
 }
